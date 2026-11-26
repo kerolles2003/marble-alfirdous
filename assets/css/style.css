@@ -101,7 +101,7 @@ img {
       background-color: #05080f;
       background-image:
         radial-gradient(ellipse 120% 42% at 50% 0%, rgba(150,111,51,.22), transparent 62%),
-        linear-gradient(to bottom, rgba(3,8,18,.62), rgba(3,8,18,.80)),
+        linear-gradient(to bottom, rgba(3,8,18,.60), rgba(3,8,18,.55) 30%, rgba(3,8,18,.92) 65%, rgba(3,8,18,.96)),
         url(../images/kitchen-01.jpg);
       background-size: auto, auto, cover;
       background-position: center top, center, center 32%;
@@ -780,3 +780,12 @@ input[type="tel"]{ direction: rtl; text-align: right; }
 .offcanvas-logo{ width: 168px; height: auto; display: block; }
 .footer-logo svg{ width: 200px; height: auto; }
 .footer-tagline{ color: #cfc8b8; font-size: 15px; font-weight: 600; margin-top: 2px; }
+
+/* ===== جولة 5 — أقسام جديدة في الرئيسية (2026-11-26) ===== */
+.material-card{ background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.08); height: 100%; }
+.material-card img{ width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.material-card .mat-body{ padding: 18px 16px 20px; text-align: center; }
+.material-card h5{ font-weight: 800; margin-bottom: 6px; }
+.material-card p{ color: #5a5a5a; margin-bottom: 0; }
+.step-num{ width: 64px; height: 64px; border-radius: 50%; background: var(--c-brand); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800; margin-bottom: 16px; }
+.steps p{ color: #5a5a5a; }
