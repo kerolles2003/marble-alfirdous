@@ -6,7 +6,7 @@
     --c-dark: #030f27;
     --c-brand: #966f33;
     --c-brand-light: #966e33c5;
-    --c-brand-rgb: 78, 87, 212;
+    --c-brand-rgb: 150, 111, 51;
     --c-body: #727272;
     --font-base: "ClashDisplay", sans-serif;
     --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
@@ -101,10 +101,10 @@ img {
       background-color: #05080f;
       background-image:
         radial-gradient(ellipse 120% 42% at 50% 0%, rgba(150,111,51,.22), transparent 62%),
-        linear-gradient(to bottom, rgba(3,8,18,.60), rgba(3,8,18,.55) 30%, rgba(3,8,18,.92) 65%, rgba(3,8,18,.96)),
-        url(../images/kitchen-01.jpg);
-      background-size: auto, auto, cover;
-      background-position: center top, center, center 32%;
+        linear-gradient(to bottom, rgba(3,8,18,.55), rgba(3,8,18,.45) 35%, rgba(3,8,18,.80) 80%, rgba(3,8,18,.92)),
+        url(../images/kitchen-04.jpg);
+      background-size: auto, auto, 220% auto;
+      background-position: center top, center, center 45%;
       background-repeat: no-repeat;
   
   }
