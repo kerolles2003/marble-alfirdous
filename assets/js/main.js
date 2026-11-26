@@ -8,5 +8,5 @@ if (window.AOS) AOS.init({
   once: false, // whether animation should happen only once - while scrolling down
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
+  disable: function(){ return window.innerWidth < 768; }, // تدقيق 2026-11-26 (جولة 2): على الموبايل والتابلت حركات الظهور بتسيب فراغات بيضاء ونص باهت أثناء التمرير — إلغاؤها والمحتوى يظهر فوراً
 });
