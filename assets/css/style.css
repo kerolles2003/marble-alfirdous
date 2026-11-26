@@ -98,7 +98,14 @@ img {
   
   .list-nav {
       width: 75% !important;
-      background-image: url(../images/navbar-bg.jpeg);
+      background-color: #05080f;
+      background-image:
+        radial-gradient(ellipse 120% 42% at 50% 0%, rgba(150,111,51,.30), transparent 62%),
+        linear-gradient(to bottom, rgba(3,8,18,.86), rgba(3,8,18,.93)),
+        url(../images/kitchen-01.jpg);
+      background-size: auto, auto, cover;
+      background-position: center top, center, center 32%;
+      background-repeat: no-repeat;
   
   }
   
@@ -390,7 +397,8 @@ img {
       margin: 5px;
     }
     .gallery .image{
-      width: 100%;
+      width: calc(100% / 2);
+      padding: 4px;
     }
   }
 
@@ -654,7 +662,7 @@ footer {
 .wrapper .items{ max-width: 920px; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .wrapper .items .item.active{ background-color: var(--c-brand) !important; color: #fff !important; }
 .wrapper .items .item:hover{ background-color: var(--c-brand); color: #fff; }
-.gallery .image img{ object-fit: cover; }
+.gallery .image img{ width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
 .gallery .image{ overflow: hidden; border-radius: 10px; }
 footer{ background-image: none; background-color: #030f27; }
 /* التواصل: فورم + معلومات فقط، من غير خريطة */
@@ -673,13 +681,13 @@ footer{ background-image: none; background-color: #030f27; }
 .service .iconbox i{ font-size: 34px; }
 
 /* ===== معرض الفردوس — فونت عربي بريميوم ===== */
-:root{ --font-base: 'IBM Plex Sans Arabic', sans-serif; }
-body{ font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif; }
+:root{ --font-base: 'Cairo', sans-serif; }
+body{ font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 .navbar-brand, .offcanvas-title, .display-1, .display-4{
-  font-family: 'Alexandria', 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
-input, textarea, button, .btn{ font-family: 'IBM Plex Sans Arabic', sans-serif; }
+input, textarea, button, .btn{ font-family: 'Cairo', sans-serif; }
 /* هيدر صفحات الأقسام */
 .page-hero{
   background: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.55)), url('../images/hero.jpg');
@@ -738,8 +746,8 @@ footer > section{ padding-left: 20px; padding-right: 20px; }
 }
 /* ج) أيقونات القائمة الجانبية كانت زرقاء: كلاس text-primary بتاع بوتستراب (‎!important) كان بيغلب لون الأيقونة — الأبيض على المربع الذهبي هو الصح */
 .offcanvas .nav-item .icon{ color: #fff !important; }
-/* د) عناوين صور المعرض كانت بتظهر على الـ hover بس — على اللمس تظهر دائماً كتسمية تحت الصورة */
-@media (hover: none){
+/* د) عناوين صور المعرض كانت بتظهر على الـ hover بس — على الشاشات الصغيرة تظهر دائماً كتسمية تحت الصورة (بميديا كويري حسب العرض مش حسب الـ hover، عشان تشتغل وتتختبر على أي شاشة ضيقة) */
+@media (max-width: 768px){
   .gallery .image{ position: relative; }
   .gallery .image::after{
     content: attr(data-title);
@@ -754,3 +762,18 @@ footer > section{ padding-left: 20px; padding-right: 20px; }
 .inputBox input:not([type="submit"]), .inputBox textarea{ width: 100%; min-width: 0; box-sizing: border-box; }
 .inputBox{ min-width: 0; }
 input[type="tel"]{ direction: rtl; text-align: right; }
+
+/* ===== جولة 3 — 2026-11-26 (ملاحظات المالك: الفونت، خلفية القائمة، الشريط العلوي، المعرض) ===== */
+/* أ) الشريط العلوي: سطر واحد أنيق — الرقم بأيقونة ذهبية + أزرار دائرية (واتساب/اتصال)، بدل الصفين المكدسين والأيقونة المهزوزة */
+.topbar{ border-bottom: 1px solid rgba(150,111,51,.35); }
+.topbar-num{ color: #fff; font-weight: 700; font-size: 17px; display: inline-flex; align-items: center; gap: 8px; }
+.topbar-num i{ color: var(--c-brand); font-size: 15px; }
+.topbar-num:hover{ color: #fff; }
+.topbar-icons a{ width: 34px; height: 34px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(150,111,51,.22); color: #fff; font-size: 16px; text-decoration: none; transition: background .25s; }
+.topbar-icons a:hover{ background: var(--c-brand); color: #fff; }
+@media (max-width: 576px){
+  .topbar-num{ font-size: 15px; }
+  .topbar-icons a{ width: 30px; height: 30px; font-size: 14px; }
+}
+/* ب) أزرار فلاتر المعرض: شكل حبوب (pill) بحدود ذهبية خفيفة */
+.wrapper .items .item{ border-radius: 999px; border: 1px solid rgba(150,111,51,.45); }
