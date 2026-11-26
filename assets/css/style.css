@@ -100,8 +100,8 @@ img {
       width: 75% !important;
       background-color: #05080f;
       background-image:
-        radial-gradient(ellipse 120% 42% at 50% 0%, rgba(150,111,51,.30), transparent 62%),
-        linear-gradient(to bottom, rgba(3,8,18,.86), rgba(3,8,18,.93)),
+        radial-gradient(ellipse 120% 42% at 50% 0%, rgba(150,111,51,.22), transparent 62%),
+        linear-gradient(to bottom, rgba(3,8,18,.62), rgba(3,8,18,.80)),
         url(../images/kitchen-01.jpg);
       background-size: auto, auto, cover;
       background-position: center top, center, center 32%;
@@ -662,7 +662,7 @@ footer {
 .wrapper .items{ max-width: 920px; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .wrapper .items .item.active{ background-color: var(--c-brand) !important; color: #fff !important; }
 .wrapper .items .item:hover{ background-color: var(--c-brand); color: #fff; }
-.gallery .image img{ width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.gallery .image img{ display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
 .gallery .image{ overflow: hidden; border-radius: 10px; }
 footer{ background-image: none; background-color: #030f27; }
 /* التواصل: فورم + معلومات فقط، من غير خريطة */
@@ -746,17 +746,14 @@ footer > section{ padding-left: 20px; padding-right: 20px; }
 }
 /* ج) أيقونات القائمة الجانبية كانت زرقاء: كلاس text-primary بتاع بوتستراب (‎!important) كان بيغلب لون الأيقونة — الأبيض على المربع الذهبي هو الصح */
 .offcanvas .nav-item .icon{ color: #fff !important; }
-/* د) عناوين صور المعرض كانت بتظهر على الـ hover بس — على الشاشات الصغيرة تظهر دائماً كتسمية تحت الصورة (بميديا كويري حسب العرض مش حسب الـ hover، عشان تشتغل وتتختبر على أي شاشة ضيقة) */
-@media (max-width: 768px){
-  .gallery .image{ position: relative; }
-  .gallery .image::after{
-    content: attr(data-title);
-    position: absolute; left: 7px; right: 7px; bottom: 7px;
-    padding: 28px 12px 10px;
-    background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0));
-    color: #fff; font-size: 15px; font-weight: 600; text-align: center;
-    pointer-events: none; border-radius: 0 0 10px 10px;
-  }
+/* د) عناوين صور المعرض: شريط تسمية داكن تحت كل صورة على كل المقاسات (مش أوفرلاي فوق الصورة) */
+.gallery .image::after{
+  content: attr(data-title);
+  display: block;
+  background: #0d1526;
+  color: #e8c97a;
+  font-size: 15px; font-weight: 600; text-align: center;
+  padding: 10px 8px;
 }
 /* هـ) حقل الهاتف في التواصل كان مقصوص على الشاشات الضيقة: الـ input من غير width فعرضه الأدنى الطبيعي (~370px) كان أكبر من العمود (~340px) فبيطلع برّه على الشمال (RTL) — والـ tel بيرندر LTR فالـ placeholder كان بيبدأ من الطرف المقصوص */
 .inputBox input:not([type="submit"]), .inputBox textarea{ width: 100%; min-width: 0; box-sizing: border-box; }
@@ -777,3 +774,9 @@ input[type="tel"]{ direction: rtl; text-align: right; }
 }
 /* ب) أزرار فلاتر المعرض: شكل حبوب (pill) بحدود ذهبية خفيفة */
 .wrapper .items .item{ border-radius: 999px; border: 1px solid rgba(150,111,51,.45); }
+
+/* ===== جولة 4 — اللوجو (2026-11-26) ===== */
+.brand-diamond{ width: 26px; height: 26px; flex: none; }
+.offcanvas-logo{ width: 168px; height: auto; display: block; }
+.footer-logo svg{ width: 200px; height: auto; }
+.footer-tagline{ color: #cfc8b8; font-size: 15px; font-weight: 600; margin-top: 2px; }
