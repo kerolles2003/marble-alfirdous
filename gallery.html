@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>معرض الفردوس | معرض الأعمال</title>
     <meta name="description" content="معرض الفردوس للرخام والجرانيت — تفصيل وتركيب مطابخ، حمامات، أبواب وعتب، وطاولات حسب المقاس. شوف شغلنا واطلب عرض سعر على واتساب.">
+    <meta name="theme-color" content="#030f27">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="معرض الفردوس | معرض الأعمال">
+    <meta property="og:description" content="معرض الفردوس للرخام والجرانيت — تفصيل وتركيب مطابخ، حمامات، أبواب وعتب، وطاولات حسب المقاس.">
+    <meta property="og:image" content="https://marble-alfirdous.vercel.app/assets/images/hero.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,9 +57,9 @@
                 <div class="offcanvas offcanvas-end list-nav" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h3 class="offcanvas-title m-3 text-light" id="offcanvasNavbarLabel">معرض <span>الفردوس</span></h3>
-                        <button type="button" class="btn-close visually-hidden" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body h-50">
+                    <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
                             <li class="nav-item fs-3">
                                 <a class="nav-link mt-1" href="index.html">الرئيسية</a>
@@ -97,47 +102,38 @@
 <!-- PORTFOLIO -->
     <div class="wrapper">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">منتجاتنا</h1>
-                        <div class="line"></div>
-                        <p class="fs-4">"شغلنا على الطبيعة — دوس على أي قسم عشان تشوف صوره بس"</p>
-                    </div>
-                </div>
-            </div>
         </div>
         <nav>
             <div class="items" data-aos="fade-down">
-                <span class="item active" data-name="all">الكل</span>
-                <span class="item" data-name="kitchen">مطابخ</span>
-                <span class="item" data-name="bathroom">حمامات</span>
-                <span class="item" data-name="door">أبواب</span>
-                <span class="item" data-name="workshop">الورشة</span>
-                <span class="item" data-name="table">طاولات</span>
+                <span class="item active" data-name="all" tabindex="0" role="button">الكل</span>
+                <span class="item" data-name="kitchen" tabindex="0" role="button">مطابخ</span>
+                <span class="item" data-name="bathroom" tabindex="0" role="button">حمامات</span>
+                <span class="item" data-name="door" tabindex="0" role="button">أبواب</span>
+                <span class="item" data-name="workshop" tabindex="0" role="button">الورشة</span>
+                <span class="item" data-name="table" tabindex="0" role="button">طاولات</span>
             </div>
         </nav>
         <div class="gallery" id="gallery">
-            <a href="assets/images/kitchen-01.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-01.jpg" alt="مطبخ رخام أسود"></a>
-            <a href="assets/images/kitchen-02.jpg" data-lightbox="models" data-title="مطبخ — جرانيت أسود" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-02.jpg" alt="مطبخ جرانيت أسود بحوض"></a>
-            <a href="assets/images/kitchen-03.jpg" data-lightbox="models" data-title="مطبخ — بار جرانيت" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-03.jpg" alt="مطبخ جرانيت ببار"></a>
-            <a href="assets/images/kitchen-04.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-04.jpg" alt="مطبخ رخام أسود حرف L"></a>
-            <a href="assets/images/door-01.jpg" data-lightbox="models" data-title="عتب باب — جرانيت" class="image" data-name="door" data-aos="fade-down"><img src="assets/images/door-01.jpg" alt="عتب باب جرانيت"></a>
-            <a href="assets/images/kitchen-05.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-05.jpg" alt="مطبخ رخام أسود"></a>
-            <a href="assets/images/workshop-01.jpg" data-lightbox="models" data-title="من الورشة — تفصيل رخام" class="image" data-name="workshop" data-aos="fade-down"><img src="assets/images/workshop-01.jpg" alt="تفصيل رخام أبيض في الورشة"></a>
-            <a href="assets/images/bathroom-01.jpg" data-lightbox="models" data-title="حمام — رخام غامق" class="image" data-name="bathroom" data-aos="fade-down"><img src="assets/images/bathroom-01.jpg" alt="حوض حمام رخام غامق"></a>
-            <a href="assets/images/bathroom-02.jpg" data-lightbox="models" data-title="حمام — رخام أبيض" class="image" data-name="bathroom" data-aos="fade-down"><img src="assets/images/bathroom-02.jpg" alt="حوض حمام رخام أبيض"></a>
-            <a href="assets/images/bathroom-03.jpg" data-lightbox="models" data-title="حمام — جرانيت رمادي" class="image" data-name="bathroom" data-aos="fade-down"><img src="assets/images/bathroom-03.jpg" alt="حوض حمام جرانيت رمادي"></a>
-            <a href="assets/images/bathroom-04.jpg" data-lightbox="models" data-title="حمام — إطار رخام" class="image" data-name="bathroom" data-aos="fade-down"><img src="assets/images/bathroom-04.jpg" alt="رف حمام بإطار رخام أسود"></a>
-            <a href="assets/images/kitchen-06.jpg" data-lightbox="models" data-title="مطبخ كبير — جزيرة رخام" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-06.jpg" alt="مطبخ كبير بجزيرة رخام"></a>
-            <a href="assets/images/kitchen-07.jpg" data-lightbox="models" data-title="مطبخ — بار جرانيت" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-07.jpg" alt="بار مطبخ جرانيت أسود"></a>
-            <a href="assets/images/kitchen-08.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-08.jpg" alt="مطبخ رخام رمادي بحوض"></a>
-            <a href="assets/images/kitchen-09.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-09.jpg" alt="مطبخ رخام رمادي بحوض"></a>
-            <a href="assets/images/kitchen-10.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-10.jpg" alt="طاولة مطبخ رخام أسود منحنية"></a>
-            <a href="assets/images/bathroom-05.jpg" data-lightbox="models" data-title="حمام — جرانيت أسود" class="image" data-name="bathroom" data-aos="fade-down"><img src="assets/images/bathroom-05.jpg" alt="حوض حمام جرانيت أسود"></a>
-            <a href="assets/images/workshop-02.jpg" data-lightbox="models" data-title="من الورشة — جرانيت بيج" class="image" data-name="workshop" data-aos="fade-down"><img src="assets/images/workshop-02.jpg" alt="حوض جرانيت بيج من الورشة"></a>
-            <a href="assets/images/kitchen-11.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img src="assets/images/kitchen-11.jpg" alt="مطبخ رخام رمادي بحوض"></a>
-            <a href="assets/images/table-01.jpg" data-lightbox="models" data-title="ترابيزة سفرة — رخام" class="image" data-name="table" data-aos="fade-down"><img src="assets/images/table-01.jpg" alt="ترابيزة سفرة رخام"></a>
+            <a href="assets/images/kitchen-01.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-01.jpg" alt="مطبخ رخام أسود"></a>
+            <a href="assets/images/kitchen-02.jpg" data-lightbox="models" data-title="مطبخ — جرانيت أسود" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-02.jpg" alt="مطبخ جرانيت أسود بحوض"></a>
+            <a href="assets/images/kitchen-03.jpg" data-lightbox="models" data-title="مطبخ — بار جرانيت" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-03.jpg" alt="مطبخ جرانيت ببار"></a>
+            <a href="assets/images/kitchen-04.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-04.jpg" alt="مطبخ رخام أسود حرف L"></a>
+            <a href="assets/images/door-01.jpg" data-lightbox="models" data-title="عتب باب — جرانيت" class="image" data-name="door" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/door-01.jpg" alt="عتب باب جرانيت"></a>
+            <a href="assets/images/kitchen-05.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-05.jpg" alt="مطبخ رخام أسود"></a>
+            <a href="assets/images/workshop-01.jpg" data-lightbox="models" data-title="من الورشة — تفصيل رخام" class="image" data-name="workshop" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/workshop-01.jpg" alt="تفصيل رخام أبيض في الورشة"></a>
+            <a href="assets/images/bathroom-01.jpg" data-lightbox="models" data-title="حمام — رخام غامق" class="image" data-name="bathroom" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/bathroom-01.jpg" alt="حوض حمام رخام غامق"></a>
+            <a href="assets/images/bathroom-02.jpg" data-lightbox="models" data-title="حمام — رخام أبيض" class="image" data-name="bathroom" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/bathroom-02.jpg" alt="حوض حمام رخام أبيض"></a>
+            <a href="assets/images/bathroom-03.jpg" data-lightbox="models" data-title="حمام — جرانيت رمادي" class="image" data-name="bathroom" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/bathroom-03.jpg" alt="حوض حمام جرانيت رمادي"></a>
+            <a href="assets/images/bathroom-04.jpg" data-lightbox="models" data-title="حمام — إطار رخام" class="image" data-name="bathroom" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/bathroom-04.jpg" alt="رف حمام بإطار رخام أسود"></a>
+            <a href="assets/images/kitchen-06.jpg" data-lightbox="models" data-title="مطبخ كبير — جزيرة رخام" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-06.jpg" alt="مطبخ كبير بجزيرة رخام"></a>
+            <a href="assets/images/kitchen-07.jpg" data-lightbox="models" data-title="مطبخ — بار جرانيت" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-07.jpg" alt="بار مطبخ جرانيت أسود"></a>
+            <a href="assets/images/kitchen-08.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-08.jpg" alt="مطبخ رخام رمادي بحوض"></a>
+            <a href="assets/images/kitchen-09.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-09.jpg" alt="مطبخ رخام رمادي بحوض"></a>
+            <a href="assets/images/kitchen-10.jpg" data-lightbox="models" data-title="مطبخ — رخام أسود" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-10.jpg" alt="طاولة مطبخ رخام أسود منحنية"></a>
+            <a href="assets/images/bathroom-05.jpg" data-lightbox="models" data-title="حمام — جرانيت أسود" class="image" data-name="bathroom" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/bathroom-05.jpg" alt="حوض حمام جرانيت أسود"></a>
+            <a href="assets/images/workshop-02.jpg" data-lightbox="models" data-title="من الورشة — جرانيت بيج" class="image" data-name="workshop" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/workshop-02.jpg" alt="حوض جرانيت بيج من الورشة"></a>
+            <a href="assets/images/kitchen-11.jpg" data-lightbox="models" data-title="مطبخ — رخام رمادي" class="image" data-name="kitchen" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/kitchen-11.jpg" alt="مطبخ رخام رمادي بحوض"></a>
+            <a href="assets/images/table-01.jpg" data-lightbox="models" data-title="ترابيزة سفرة — رخام" class="image" data-name="table" data-aos="fade-down"><img loading="lazy" decoding="async" src="assets/images/table-01.jpg" alt="ترابيزة سفرة رخام"></a>
         </div>
     </div>
 

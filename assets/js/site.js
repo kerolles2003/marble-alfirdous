@@ -44,6 +44,11 @@ if(contactForm){
 var filterItem = document.querySelector(".items");
 var filterImg = document.querySelectorAll(".gallery .image");
 if(filterItem){
+  filterItem.addEventListener('keydown', function(e){
+    if((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('item')){
+      e.preventDefault(); e.target.click();
+    }
+  });
   filterItem.addEventListener('click', function(selectedItem){
     if(selectedItem.target.classList.contains("item")){
       filterItem.querySelector(".active").classList.remove("active");
