@@ -1,12 +1,37 @@
+/* معرض الفردوس — حركات الظهور وتفاعل الهيدر */
 
-if (window.AOS) AOS.init({
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 900, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-  disable: function(){ return window.innerWidth < 768; }, // تدقيق 2026-11-26 (جولة 2): على الموبايل والتابلت حركات الظهور بتسيب فراغات بيضاء ونص باهت أثناء التمرير — إلغاؤها والمحتوى يظهر فوراً
-});
+(function () {
+  var header = document.querySelector('.site-header');
+  function syncHeaderState() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  }
+  syncHeaderState();
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (reveals.length === 0) return;
+
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  reveals.forEach(function (el) {
+    var rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) {
+      el.classList.add('is-visible');
+    } else {
+      observer.observe(el);
+    }
+  });
+})();
